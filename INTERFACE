@@ -1,0 +1,6 @@
+// interface para o calculo 
+package br.com.icaro.interface;
+
+public interface Calculavel {
+  double calcularIMC();
+}
