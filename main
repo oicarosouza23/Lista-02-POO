@@ -1,0 +1,20 @@
+package br.com.icaro.main;
+
+public class Main {
+
+  public static void main(String[] args) {
+    String nome = "Michael B Jordan";
+    int idade = 30;
+    double peso = 80;
+    double altura = 1.75;
+
+    Pessoa pessoa = new Pessoa(nome, idade, peso, altura);
+    double imc = pessoa.calcularIMC();
+    String classificacao = pessoa.classificarIMC();
+
+    System.out.println("Pessoa: " + pessoa);
+    System.out.println("IMC: " + imc);
+    System.out.println("Classificação: " + classificacao);
+  }
+}
+
