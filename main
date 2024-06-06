@@ -1,20 +1,29 @@
+// Declaração do pacote
 package br.com.icaro.main;
 
+// Declaração a classe principal Main
 public class Main {
 
+  //  é o ponto de entrada do programa
   public static void main(String[] args) {
+    // Declaração e inicialização das variáveis
     String nome = "Michael B Jordan";
     int idade = 30;
     double peso = 80;
     double altura = 1.75;
 
+    // Criação de um objeto Pessoa com os valores fornecidos
     Pessoa pessoa = new Pessoa(nome, idade, peso, altura);
+    
+    // Cálculo do IMC usando o método da classe Pessoa
     double imc = pessoa.calcularIMC();
+    
+    // Classificação do IMC usando o método classificarIMC da classe Pessoa
     String classificacao = pessoa.classificarIMC();
 
+    // Impressão dos detalhes da pessoa, do IMC e da classificação
     System.out.println("Pessoa: " + pessoa);
     System.out.println("IMC: " + imc);
     System.out.println("Classificação: " + classificacao);
   }
 }
-
