@@ -1,12 +1,16 @@
-package br.com.icaro.pessoa
+// Declaração do pacote
+package br.com.icaro.pessoa;
 
+// Declaração da classe Pessoa que implementa a interface Calculavel
 public class Pessoa implements Calculavel {
 
+  // Atributos privados da classe
   private String nome;
   private int idade;
   private double peso;
   private double altura;
 
+  // Construtor da classe Pessoa
   public Pessoa(String nome, int idade, double peso, double altura) {
     this.nome = nome;
     this.idade = idade;
@@ -14,60 +18,72 @@ public class Pessoa implements Calculavel {
     this.altura = altura;
   }
 
+  // Getter para o nome
   public String getNome() {
     return nome;
   }
 
+  // Setter para o nome
   public void setNome(String nome) {
     this.nome = nome;
   }
 
+  // Getter para a idade
   public int getIdade() {
     return idade;
   }
 
+  // Setter para a idade
   public void setIdade(int idade) {
     this.idade = idade;
   }
 
+  // Getter para o peso
   public double getPeso() {
     return peso;
   }
 
+  // Setter para o peso
   public void setPeso(double peso) {
     this.peso = peso;
   }
 
+  // Getter a altura
   public double getAltura() {
     return altura;
   }
 
+  // Setter para a altura
   public void setAltura(double altura) {
     this.altura = altura;
   }
 
+  // método calcularIMC da interface Calculavel
   @Override
   public double calcularIMC() {
+    // Calcula o IMC (Índice de Massa Corporal)
     return peso / (altura * altura);
   }
 
+  //  classificar o IMC em categorias
   public String classificarIMC() {
-    double imc = calcularIMC();
+    double imc = calcularIMC(); // Calcula o IMC
     if (imc < 18.5) {
-      return "Abaixo do peso";
+      return "Abaixo do peso"; // IMC menor que 18.5
     } else if (imc < 25) {
-      return "Peso normal";
+      return "Peso normal"; // IMC entre 18.5 e 24.9
     } else if (imc < 30) {
-      return "Sobrepeso";
+      return "Sobrepeso"; // IMC entre 25 e 29.9
     } else if (imc < 35) {
-      return "Obesidade grau 1";
+      return "Obesidade grau 1"; // IMC entre 30 e 34.9
     } else if (imc < 40) {
-      return "Obesidade grau 2";
+      return "Obesidade grau 2"; // IMC entre 35 e 39.9
     } else {
-      return "Obesidade grau 3";
+      return "Obesidade grau 3"; // IMC maior ou igual a 40
     }
   }
 
+  // Métodopara representação textual do objeto Pessoa
   @Override
   public String toString() {
     return "Pessoa{" +
